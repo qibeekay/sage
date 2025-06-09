@@ -3,6 +3,10 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
+import Footer from "./components/shared/Footer";
+import About from "./pages/About";
+import Navbar from "./components/shared/Navbar";
+import PenTesting from "./pages/services/PenTesting";
 
 function App() {
   // Initialize Lenis smooth scroll
@@ -28,9 +32,13 @@ function App() {
   }, []);
   return (
     <>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services/penetration-testing" element={<PenTesting />} />
       </Routes>
+      <Footer />
     </>
   );
 }

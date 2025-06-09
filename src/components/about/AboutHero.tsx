@@ -31,7 +31,7 @@ const useRelativeMousePosition = (to: RefObject<HTMLElement | null>) => {
   return [mouseX, mouseY];
 };
 
-const Hero = () => {
+const AboutHero = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(contentRef, { once: false, amount: 0.3 });
@@ -59,7 +59,6 @@ const Hero = () => {
       transition: { type: "spring", stiffness: 100 },
     },
   };
-
   return (
     <section className="">
       <div
@@ -93,7 +92,7 @@ const Hero = () => {
             className="border border-[#002752] py-2 px-6 rounded-full text-sm sm:text-lg"
             variants={itemVariants}
           >
-            Cybersecurity Consulting Company
+            Know us more
           </motion.p>
 
           {/* header text */}
@@ -101,8 +100,8 @@ const Hero = () => {
             className="text-xl xs:text-3xl md:text-5xl lg:text-8xl my-4 font-semibold tracking-tighter bg-gradient-to-b from-neutral-50 via-neutral-300 to-neutral-700 bg-clip-text text-transparent py-5 flex flex-col"
             variants={itemVariants}
           >
-            <span>Protect your organizations</span>
-            <span>from evolving digital threats</span>
+            <span>A little about</span>
+            <span>Sage Consolidated</span>
           </motion.h1>
 
           {/* paragraph text */}
@@ -110,24 +109,14 @@ const Hero = () => {
             className="text-ashGray max-w-[900px] text-sm sm:text-base md:text-xl"
             variants={itemVariants}
           >
-            <span className="font-bold">SAGE Consolidated</span> is a
-            forward-thinking cybersecurity consulting company dedicated to
-            protecting organizations across Africa and beyond from evolving
+            We are forward-thinking cybersecurity consulting company dedicated
+            to protecting organizations across Africa and beyond from evolving
             digital threats.
           </motion.p>
-
-          {/* cta buttons */}
-          <motion.div
-            className="flex items-center justify-center gap-5 mt-5 relative w-full flex-wrap"
-            variants={itemVariants}
-          >
-            <Btn type="border">Learn More</Btn>
-            <AnimeBtn>Consult Us Now</AnimeBtn>
-          </motion.div>
         </motion.div>
       </div>
     </section>
   );
 };
 
-export default Hero;
+export default AboutHero;

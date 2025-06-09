@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 const TrustedPartners = () => {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-10">
+    <section className="max-w-7xl mx-auto px-4 py-20">
       <div className="">
         <div className="flex items-center gap-5">
           {/* header */}

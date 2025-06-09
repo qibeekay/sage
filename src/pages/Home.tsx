@@ -14,7 +14,6 @@ const Home = () => {
 
   return (
     <div className="text-neutral-300 antialiased">
-      <Navbar />
       <motion.div>
         <Hero />
         <TrustedPartners />

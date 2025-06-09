@@ -1,12 +1,12 @@
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
-import { animate } from "framer-motion";
 import {
+  animate,
   useMotionTemplate,
   motion,
   useMotionValue,
   useInView,
   type ValueAnimationTransition,
-} from "framer-motion"; // Fixed imports
+} from "motion/react"; // Fixed imports
 import React, { useEffect, useRef, useState } from "react";
 
 // Define the type for each card
@@ -64,7 +64,7 @@ const cards = [
 
 const AboutUs = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(sectionRef, { once: false, amount: 0.2 });
+  const isInView = useInView(sectionRef, { once: false, amount: 0.1 });
 
   // Animation variants
   const containerVariants = {

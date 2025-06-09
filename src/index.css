@@ -33,3 +33,9 @@
   background: #080808;
   font-family: "Satoshi-Variable";
 }
+
+@media screen and (min-width: 768px) {
+  .rotate-text {
+    writing-mode: vertical-lr;
+  }
+}
