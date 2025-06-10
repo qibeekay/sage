@@ -61,7 +61,7 @@ const SharedOverview = () => {
         </div>
 
         {/* flex 2 */}
-        <div className="w-full py-[50vh]">
+        <div className="w-full pt-[40vh] pb-[10vh]">
           <div className="flex flex-col items-end gap-10">
             {features.map((feature) => (
               <div
