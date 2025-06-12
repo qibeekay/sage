@@ -2,7 +2,7 @@ import Timeline from "./Timeline";
 
 const SharedSteps = () => {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-10 md:py-20 min-h-screen">
+    <section className="max-w-7xl mx-auto px-4 py-10 md:py-20 min-h-screen overflow-hidden">
       <div className="flex flex-col items-center text-center relative">
         <div>
           <p className="border border-[#002752] py-2 px-6 rounded-full text-sm sm:text-lg w-fit">

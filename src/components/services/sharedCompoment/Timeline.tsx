@@ -102,7 +102,7 @@ const Timeline = () => {
   return (
     <div className="relative max-w-7xl mx-auto my-[10rem]">
       {/* Timeline line */}
-      <div className="absolute left-8 md:left-1/2 transform md:-translate-x-0.5 w-0.5 h-full bg-gradient-to-b from-blue-400 via-purple-400 to-indigo-400"></div>
+      <div className="absolute left-4 md:left-1/2 transform md:-translate-x-0.5 w-0.5 h-full bg-gradient-to-b from-blue-400 via-purple-400 to-indigo-400"></div>
 
       <div className="space-y-12">
         {approachData.map((item, index) => (

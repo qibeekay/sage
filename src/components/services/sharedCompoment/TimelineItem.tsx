@@ -111,7 +111,7 @@ const TimelineItem = ({ item, index }: TimelineItemProps) => {
       {/* Content Card */}
       <motion.div
         variants={cardVariants}
-        className={`flex-1 ml-16 md:ml-0 ${isEven ? "md:pr-8" : "md:pl-8"}`}
+        className={`flex-1 ml-10 md:ml-0 ${isEven ? "md:pr-8" : "md:pl-8"}`}
       >
         <motion.div
           whileHover={{ y: -5 }}
@@ -174,7 +174,7 @@ const TimelineItem = ({ item, index }: TimelineItemProps) => {
       </motion.div>
 
       {/* Timeline Node */}
-      <motion.div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 flex items-center justify-center">
+      <motion.div className="absolute left-2.5 md:left-1/2 transform md:-translate-x-1/2 flex items-center justify-center">
         <div
           className={`w-4 h-4 rounded-full border-4 border-white shadow-lg bg-gradient-to-r ${getCategoryColor(
             item.category
@@ -203,7 +203,7 @@ const TimelineItem = ({ item, index }: TimelineItemProps) => {
         initial={{ opacity: 0 }}
         animate={inView ? { opacity: 1 } : { opacity: 0 }}
         transition={{ delay: 0.1 }}
-        className="md:hidden absolute left-20 top-0"
+        className="md:hidden absolute left-20 -top-3"
       >
         <div
           className={`bg-gradient-to-r text-white px-3 py-1 rounded-full shadow-md font-semibold text-sm ${getCategoryColor(
