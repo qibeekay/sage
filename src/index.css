@@ -10,6 +10,15 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Enoch";
+  src: url("../src/assets/fonts//ENOCH.woff") format("woff"),
+    url("../src/assets/fonts//ENOCH.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
 @theme {
   /* colors */
   --color-cyberBlue: #0057b7;
@@ -32,6 +41,10 @@
 :root {
   background: #080808;
   font-family: "Satoshi-Variable";
+}
+
+.footer-text {
+  font-family: "Enoch";
 }
 
 @media screen and (min-width: 768px) {

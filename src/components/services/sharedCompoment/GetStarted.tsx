@@ -44,7 +44,7 @@ const GetStarted = () => {
   }, [activeStep]);
 
   return (
-    <section className="max-w-7xl mx-auto px-4 py-20">
+    <section className="max-w-7xl mx-auto px-4 py-20 mb-[15rem]">
       <div className="bg-[#141414] max-w-[1234px] min-h-[326px] rounded-[45px] p-[50px]">
         {/* Animated progress bar */}
         <div className="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
