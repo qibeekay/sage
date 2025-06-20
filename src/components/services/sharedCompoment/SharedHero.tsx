@@ -13,7 +13,7 @@ const SharedHero = ({
 }: SharedHeroProps) => {
   return (
     <header className="w-full bg-black [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)] [mask-composite:intersect] ">
-      <div className="px-4 min-h-fit sm:min-h-dvh max-w-7xl mx-auto pt-32 relative">
+      <div className="px-4 min-h-fit md:min-h-dvh max-w-7xl mx-auto pt-32 relative">
         <div className="flex flex-col items-center text-center relative z-1">
           {/* badge text */}
           {badgeText && (

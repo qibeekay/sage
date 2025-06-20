@@ -151,7 +151,7 @@ const OurMission = () => {
               <AnimatePresence>
                 {activeCard === index && (
                   <motion.p
-                    className="md:text-xl font-semibold w-md"
+                    className="sm:text-xl lg:text-3xl font-semibold max-w-md"
                     variants={descriptionVariants}
                     initial="enter"
                     animate="center"
@@ -163,7 +163,7 @@ const OurMission = () => {
               </AnimatePresence>
 
               <div className="absolute right-10 bottom-10">
-                <div className="text-5xl font-bold rotate-text flex gap-x-10">
+                <div className="text-2xl sm:text-5xl font-bold rotate-text flex gap-x-10">
                   <h1>{content.title}</h1>
                   <div className="">
                     <motion.div

@@ -166,21 +166,21 @@ const Navbar = () => {
           <div className="flex flex-col space-y-4 max-h-[80svh] overflow-y-auto">
             <a
               href="/"
-              className="text-neutral-500 hover:text-neutral-200"
+              className="text-lg font-semibold text-neutral-500 hover:text-neutral-200"
               onClick={toggleMenu}
             >
               Home
             </a>
             <a
               href="/about"
-              className="text-neutral-500 hover:text-neutral-200"
+              className="text-lg font-semibold text-neutral-500 hover:text-neutral-200"
               onClick={toggleMenu}
             >
               About
             </a>
             <div className="flex flex-col space-y-3">
               <span
-                className="font-medium cursor-pointer text-neutral-500 hover:text-neutral-200"
+                className="text-lg font-semibold cursor-pointer text-neutral-500 hover:text-neutral-200"
                 onClick={toggleMobileServices}
               >
                 Services
@@ -210,18 +210,14 @@ const Navbar = () => {
             </div>
             <a
               href="/academy"
-              className="hover:text-neutral-200"
+              className="text-lg font-semibold text-neutral-500 hover:text-neutral-200"
               onClick={toggleMenu}
             >
               Academy
             </a>
-            <a
-              href="#"
-              className="border border-neutral-700 text-white py-2 px-4 rounded-lg hover:bg-neutral-700 transition"
-              onClick={toggleMenu}
-            >
-              Get a Demo
-            </a>
+            <div className="w-full mt-4">
+              <AnimeBtn>Consult Us Now</AnimeBtn>
+            </div>
           </div>
         </div>
       )}

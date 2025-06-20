@@ -45,7 +45,7 @@ const GetStarted = () => {
 
   return (
     <section className="max-w-7xl mx-auto px-4 py-20 mb-[15rem]">
-      <div className="bg-[#141414] max-w-[1234px] min-h-[326px] rounded-[45px] p-[50px]">
+      <div className="bg-[#141414] max-w-[1234px] min-h-[326px] rounded-[45px] px-[20px] py-[50px] sm:px-[50px]">
         {/* Animated progress bar */}
         <div className="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
           <div
@@ -56,7 +56,7 @@ const GetStarted = () => {
 
         {/* Steps with animated border */}
         <div className="mt-10">
-          <div className="grid grid-cols-4 gap-4">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {steps.map((step, index) => (
               <div
                 key={index}
