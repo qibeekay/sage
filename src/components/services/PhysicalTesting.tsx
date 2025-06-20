@@ -1,24 +1,25 @@
-import SharedHero from "./sharedCompoment/SharedHero";
-import SharedOverview from "./sharedCompoment/SharedOverview";
-import SharedSteps from "./sharedCompoment/SharedSteps";
-import SharedFeatures from "./sharedCompoment/SharedFeatures";
+import React from "react";
+import image from "../../assets/sheild3.jpg";
 import SharedWhy from "./sharedCompoment/SharedWhy";
+import SharedFeatures from "./sharedCompoment/SharedFeatures";
 import GetStarted from "./sharedCompoment/GetStarted";
-import image from "../../assets/Image_fx (1).jpg";
-import { pentestingOverview } from "../../constants/overview";
-import { pentestApproach } from "../../constants/approach";
-import { pentestFeatures } from "../../constants/features";
-import { pentestWhy } from "../../constants/whydetails";
+import SharedSteps from "./sharedCompoment/SharedSteps";
+import SharedOverview from "./sharedCompoment/SharedOverview";
+import SharedHero from "./sharedCompoment/SharedHero";
+import { physicalOverview } from "../../constants/overview";
+import { physicalSecurityApproach } from "../../constants/approach";
+import { physicalSecurityFeatures } from "../../constants/features";
+import { physicalRedTeamingWhy } from "../../constants/whydetails";
 
-const PenTestSevice = () => {
+const PhysicalTesting = () => {
   return (
-    <div className="">
+    <div>
       {/* hero section */}
       <SharedHero
         title={
           <>
-            <span>Penetration Testing & </span>
-            <span>Vulnerability Assessment</span>
+            <span>Physical Security</span>
+            <span>Assessment</span>
           </>
         }
         badgeText="Service"
@@ -37,24 +38,24 @@ const PenTestSevice = () => {
         description={
           <>
             <span>
-              Cyber threats are evolving daily, and organizations must stay
-              ahead by continuously assessing and strengthening their security
-              posture. Our Penetration Testing and Vulnerability Assessment
-              Services offer an in-depth examination of your IT infrastructure,
-              applications, and systems to uncover security weaknesses before
-              malicious actors do.
+              While organizations invest heavily in digital security, physical
+              access remains one of the most overlooked and exploited
+              vulnerabilities. A single unlocked door, untrained receptionist,
+              or misplaced access badge can compromise even the most
+              sophisticated cybersecurity framework.
             </span>
             <span>
-              We go beyond traditional, one-off assessments by providing
-              Penetration Testing as a Service (PTaaS) — a modern, continuous,
-              and on-demand approach — as well as Automated Pentesting for
-              scalability, speed, and cost-efficiency. Whether you're a small
-              business or a large enterprise, we tailor each engagement to your
-              unique risk profile, compliance requirements, and business goals.
+              Our Physical Security Assessment is a real-world test of your
+              facility’s physical controls, personnel awareness, and access
+              management protocols. Using Red Team tradecraft, we simulate
+              unauthorized entries, insider threats, and social engineering
+              techniques to identify weaknesses that adversaries could exploit
+              to gain physical access to critical infrastructure or sensitive
+              information.
             </span>
           </>
         }
-        features={pentestingOverview}
+        features={physicalOverview}
       />
 
       {/* timeline */}
@@ -69,7 +70,7 @@ const PenTestSevice = () => {
           tools, ensuring a comprehensive security evaluation. Here’s how we do
           it:"
         badgeText="Our Process"
-        timelineItems={pentestApproach}
+        timelineItems={physicalSecurityApproach}
       />
 
       {/* features */}
@@ -82,7 +83,7 @@ const PenTestSevice = () => {
         }
         description="Comprehensive capabilities designed to give you complete visibility into your security posture."
         badgeText="Service Features"
-        features={pentestFeatures}
+        features={physicalSecurityFeatures}
       />
 
       {/* why us */}
@@ -95,7 +96,7 @@ const PenTestSevice = () => {
         }
         description="Experience the difference of working with cybersecurity experts who understand your business."
         badgeText="Why us?"
-        features={pentestWhy}
+        features={physicalRedTeamingWhy}
       />
 
       {/* get started */}
@@ -104,4 +105,4 @@ const PenTestSevice = () => {
   );
 };
 
-export default PenTestSevice;
+export default PhysicalTesting;

@@ -16,38 +16,30 @@ interface TimelineItemProps {
   index: number;
 }
 
+const colorPalette = [
+  { id: 1, gradient: "from-green-400 to-emerald-500", text: "text-green-400" },
+  { id: 2, gradient: "from-blue-400 to-cyan-500", text: "text-blue-400" },
+  { id: 3, gradient: "from-purple-400 to-violet-500", text: "text-purple-400" },
+  { id: 4, gradient: "from-orange-400 to-red-500", text: "text-orange-400" },
+  { id: 5, gradient: "from-pink-400 to-rose-500", text: "text-pink-400" },
+  { id: 6, gradient: "from-indigo-400 to-blue-500", text: "text-indigo-400" },
+  { id: 7, gradient: "from-teal-400 to-cyan-600", text: "text-teal-400" },
+];
+
+const getCategoryColor = (item: ApproachItem) => {
+  const color = colorPalette.find((entry) => entry.id === item.id);
+  return color ? color.gradient : "from-gray-400 to-gray-500";
+};
+
+const getCategoryTextColor = (item: ApproachItem) => {
+  const color = colorPalette.find((entry) => entry.id === item.id);
+  return color ? color.text : "text-gray-400";
+};
+
 const TimelineItem = ({ item, index }: TimelineItemProps) => {
   const isEven = index % 2 === 0;
   const ref = useRef(null);
-
-  // Using Framer Motion's useInView hook
   const inView = useInView(ref, { once: false, margin: "0px 0px -100px 0px" });
-
-  const getCategoryColor = (category: string) => {
-    const colors = {
-      Planning: "from-green-400 to-emerald-500",
-      Automation: "from-blue-400 to-cyan-500",
-      Expertise: "from-purple-400 to-violet-500",
-      Efficiency: "from-orange-400 to-red-500",
-      Service: "from-pink-400 to-rose-500",
-      Delivery: "from-indigo-400 to-blue-500",
-    };
-    return (
-      colors[category as keyof typeof colors] || "from-gray-400 to-gray-500"
-    );
-  };
-
-  const getCategoryTextColor = (category: string) => {
-    const colors = {
-      Planning: "text-green-400",
-      Automation: "text-blue-400",
-      Expertise: "text-purple-400",
-      Efficiency: "text-orange-400",
-      Service: "text-pink-400",
-      Delivery: "text-indigo-400",
-    };
-    return colors[category as keyof typeof colors] || "text-gray-400";
-  };
 
   // Animation variants
   const containerVariants = {
@@ -123,7 +115,7 @@ const TimelineItem = ({ item, index }: TimelineItemProps) => {
               animate={inView ? { scale: 1 } : { scale: 0 }}
               transition={{ type: "spring", delay: 0.3 }}
               className={`p-2 rounded-lg bg-gradient-to-r text-white shadow-md ${getCategoryColor(
-                item.category
+                item
               )}`}
             >
               {item.icon}
@@ -132,11 +124,7 @@ const TimelineItem = ({ item, index }: TimelineItemProps) => {
               <span className="text-sm font-medium text-ashGray uppercase tracking-wide">
                 {item.step}
               </span>
-              <h3
-                className={`text-xl font-bold ${getCategoryTextColor(
-                  item.category
-                )}`}
-              >
+              <h3 className={`text-xl font-bold ${getCategoryTextColor(item)}`}>
                 {item.title}
               </h3>
             </div>
@@ -177,7 +165,7 @@ const TimelineItem = ({ item, index }: TimelineItemProps) => {
       <motion.div className="absolute left-2.5 md:left-1/2 transform md:-translate-x-1/2 flex items-center justify-center">
         <div
           className={`w-4 h-4 rounded-full border-4 border-white shadow-lg bg-gradient-to-r ${getCategoryColor(
-            item.category
+            item
           )}`}
         ></div>
       </motion.div>
@@ -191,7 +179,7 @@ const TimelineItem = ({ item, index }: TimelineItemProps) => {
       >
         <div
           className={`bg-gradient-to-r text-white px-4 py-2 rounded-full shadow-lg font-bold text-lg ${getCategoryColor(
-            item.category
+            item
           )}`}
         >
           {item.category}
@@ -207,7 +195,7 @@ const TimelineItem = ({ item, index }: TimelineItemProps) => {
       >
         <div
           className={`bg-gradient-to-r text-white px-3 py-1 rounded-full shadow-md font-semibold text-sm ${getCategoryColor(
-            item.category
+            item
           )}`}
         >
           {item.step}

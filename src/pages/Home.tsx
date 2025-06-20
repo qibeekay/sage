@@ -16,7 +16,7 @@ const Home = () => {
     <div className="text-neutral-300 antialiased">
       <motion.div>
         <Hero />
-        <TrustedPartners />
+        {/* <TrustedPartners /> */}
         <AboutUs />
         <motion.div
           animate={{ backgroundColor: bgColor }}

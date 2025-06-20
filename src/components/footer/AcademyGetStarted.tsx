@@ -1,8 +1,5 @@
 import React from "react";
 import africa from "../../assets/africa.jpg";
-import africa1 from "../../assets/africa1.jpg";
-import africa2 from "../../assets/africa2.jpg";
-import africa3 from "../../assets/africa3.jpg";
 import { AnimeBtn } from "../shared/AnimeBtn";
 
 const AcademyGetStarted = () => {
@@ -35,24 +32,6 @@ const AcademyGetStarted = () => {
             <div className="w-[30rem] aspect-square absolute left-1/2 top-1/2 -translate-1/2 md:left-auto md:-translate-0 md:right-20 md:-top-10">
               <img src={africa} className="w-full h-full object-cover" alt="" />
             </div>
-
-            {/* map2 */}
-            {/* <div className="w-[30rem] aspect-square absolute right-10 -top-10">
-              <img
-                src={africa3}
-                className="w-full h-full object-cover"
-                alt=""
-              />
-            </div> */}
-
-            {/* map 3 */}
-            {/* <div className=" absolute -right-[25rem] -top-[12rem]">
-              <img
-                src={africa2}
-                className="w-full h-full object-cover"
-                alt=""
-              />
-            </div> */}
           </div>
         </div>
       </div>

@@ -1,55 +1,36 @@
-import { Check, BarChart, Shield, Eye, Zap, Users, Globe } from "lucide-react";
-import React from "react";
+import { Check } from "lucide-react";
+import type { pentestWhy } from "../../../constants/whydetails";
 
-const features = [
-  {
-    title: "Expertise Across Domains",
-    description:
-      "Our team comprises OSCP-certified, CREST-affiliated, and real-world red teamers with years of experience across multiple industries and infrastructures.",
-  },
-  {
-    title: "Real-Time Access to Findings",
-    description:
-      "With PTaaS, you don't have to wait for a report — view findings as they're discovered, communicate directly with analysts, and initiate remediation immediately.",
-  },
-  {
-    title: "Cutting-Edge Automation",
-    description:
-      "Our Automated Pentesting Engine mimics attacker behavior at scale. It identifies common, critical, and even context-sensitive vulnerabilities quickly, making it ideal for agile environments.",
-  },
-  {
-    title: "Customer-Centric Approach",
-    description:
-      "We believe security should be collaborative and transparent. We work closely with your teams, providing knowledge transfer, training, and insights that empower your organization.",
-  },
-  {
-    title: "Local & Global Coverage",
-    description:
-      "Whether you're a Nigerian SMB or a global enterprise, we understand the regulatory, cultural, and operational context of your organization.",
-  },
-];
-
-const SharedWhy = () => {
+interface FeaturesProps {
+  badgeText: string;
+  title: React.ReactNode;
+  description: string;
+  features: typeof pentestWhy;
+}
+const SharedWhy = ({
+  badgeText,
+  title,
+  description,
+  features,
+}: FeaturesProps) => {
   return (
     <section className="max-w-7xl mx-auto px-4 py-10 md:py-[7rem]">
       <div className="">
         <div className="flex flex-col items-center text-center relative">
           <div>
             <p className="border border-[#002752] py-2 px-6 rounded-full text-sm sm:text-lg w-fit">
-              Why us?
+              {badgeText}
             </p>
           </div>
 
           {/* header text */}
           <h1 className="text-xl xs:text-3xl md:text-5xl lg:text-6xl my-4 font-semibold tracking-tighter bg-gradient-to-b from-neutral-50 via-neutral-300 to-neutral-700 bg-clip-text text-transparent py-5 flex flex-col">
-            <span>Why Choose Us for</span>
-            <span>Penetration Testing?</span>
+            {title}
           </h1>
 
           {/* paragraph text */}
           <p className="text-ashGray max-w-[900px] text-sm sm:text-base md:text-xl">
-            Experience the difference of working with cybersecurity experts who
-            understand your business.
+            {description}
           </p>
         </div>
 

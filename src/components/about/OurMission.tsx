@@ -110,7 +110,7 @@ const OurMission = () => {
   };
 
   return (
-    <section className="max-w-7xl mx-auto px-4 pb-10">
+    <section className="max-w-7xl mx-auto px-4 pb-[20rem]">
       <div className="flex items-center flex-col md:flex-row">
         {contents.map((content, index) => (
           <motion.div

@@ -36,6 +36,9 @@
   --breakpoint-lg: 976px;
   --breakpoint-llg: 1200px;
   --breakpoint-xl: 1440px;
+
+  /* fonts */
+  --font-enoch: Enoch;
 }
 
 :root {
