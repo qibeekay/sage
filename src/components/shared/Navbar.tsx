@@ -163,7 +163,7 @@ const Navbar = () => {
       {/* mobile menu */}
       {isOpen && (
         <div className="md:hidden bg-neutral-900/60 backdrop-blur-md border border-neutral-800 p-4 rounded-xl mt-2">
-          <div className="flex flex-col space-y-4 max-h-[80vh] overflow-y-auto">
+          <div className="flex flex-col space-y-4 max-h-[80svh] overflow-y-auto">
             <a
               href="/"
               className="text-neutral-500 hover:text-neutral-200"
