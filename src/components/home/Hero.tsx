@@ -121,7 +121,7 @@ const Hero = () => {
             className="flex items-center justify-center gap-5 mt-5 relative w-full flex-wrap"
             variants={itemVariants}
           >
-            <Btn type="border">Learn More</Btn>
+            <Btn>Learn More</Btn>
             <AnimeBtn>Consult Us Now</AnimeBtn>
           </motion.div>
         </motion.div>

@@ -4,9 +4,15 @@ import { useEffect, useRef, useState } from "react";
 // Define props interface for SpotlightButton
 interface SpotlightButtonProps {
   children: React.ReactNode;
+  bg?: string;
+  color?: string;
 }
 
-export const AnimeBtn: React.FC<SpotlightButtonProps> = ({ children }) => {
+export const AnimeBtn: React.FC<SpotlightButtonProps> = ({
+  children,
+  color = "dark",
+  bg = "white",
+}) => {
   const btnRef = useRef<HTMLButtonElement>(null);
   const spanRef = useRef<HTMLSpanElement>(null);
   const [glowPosition, setGlowPosition] = useState(80); // Start closer to the right
@@ -57,7 +63,7 @@ export const AnimeBtn: React.FC<SpotlightButtonProps> = ({ children }) => {
     <motion.button
       whileTap={{ scale: 0.985 }}
       ref={btnRef}
-      className="relative w-full max-w-[200px] overflow-hidden rounded-full border border-white/30 px-6 py-3 cursor-pointer text-sm font-bold bg-white text-gray-800"
+      className={`relative w-full max-w-[200px] overflow-hidden rounded-full border border-${bg}/30 px-6 py-3 cursor-pointer text-sm font-bold bg-${bg} text-${color}`}
     >
       <span className="pointer-events-none relative z-10 capitalize tracking-wide">
         {children}

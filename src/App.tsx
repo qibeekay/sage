@@ -24,6 +24,7 @@ import SocPage from "./pages/services/SocPage";
 import ThreatIntelPage from "./pages/services/ThreatIntelPage";
 import TrainingPage from "./pages/services/TrainingPage";
 import VendorPage from "./pages/services/VendorPage";
+import Academy from "./pages/Academy";
 
 function App() {
   // Initialize Lenis smooth scroll
@@ -53,6 +54,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+
+        {/* virtual academy */}
+        <Route path="/academy" element={<Academy />} />
+
+        {/* All services */}
         <Route path="/services/penetration-testing" element={<PenTesting />} />
         <Route
           path="/services/physical-security-assessment"
