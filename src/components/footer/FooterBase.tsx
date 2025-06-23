@@ -46,7 +46,7 @@ const FooterBase = () => {
         <div className="max-w-[30rem]">
           {/* logo */}
           <div>
-            <div className="w-[20rem]">
+            <div className="max-w-[20rem]">
               <img src={logo} className="w-full h-full object-cover" alt="" />
             </div>
           </div>

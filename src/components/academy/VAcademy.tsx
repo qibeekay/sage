@@ -2,6 +2,9 @@ import React from "react";
 import AcademyHero from "./AcademyHero";
 import AcademyExplained from "./AcademyExplained";
 import AcademyAudience from "./AcademyAudience";
+import AcademyExperience from "./AcademyExperience";
+import AcademyWhy from "./AcademyWhy";
+import AcademyWhat from "./AcademyWhat";
 
 const VAcademy = () => {
   return (
@@ -14,6 +17,15 @@ const VAcademy = () => {
 
       {/* who it s for */}
       <AcademyAudience />
+
+      {/* how it will go */}
+      <AcademyExperience />
+
+      {/* why choose us */}
+      <AcademyWhy />
+
+      {/* what you gain */}
+      <AcademyWhat />
     </div>
   );
 };

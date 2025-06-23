@@ -1,16 +1,10 @@
 import React, { useRef } from "react";
-import {
-  animate,
-  useMotionTemplate,
-  motion,
-  useMotionValue,
-  useInView,
-  type ValueAnimationTransition,
-} from "motion/react";
+import { motion, useInView } from "motion/react";
+import { details } from "../../constants/academy";
 
 const AcademyAudience = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(sectionRef, { once: false, amount: 0.1 });
+  const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
 
   // Animation variants
   const containerVariants = {
@@ -63,6 +57,41 @@ const AcademyAudience = () => {
             this for.
           </motion.p>
         </motion.div>
+
+        {/* grid section */}
+        <div className="lg:grid lg:grid-cols-2 gap-10 py-10">
+          {details.map((detail, index) => (
+            <div
+              key={index}
+              className={` lg:w-full px-10 xs:px-[30px] py-[50px] rounded-[45px] bg-gradient-to-br ${detail.gradient} max-w-[40rem] lg:max-w-full mx-auto mt-10 lg:mt-0`}
+            >
+              <div className="flex items-center flex-col-reverse sm:flex-row gap-5 justify-between">
+                {/* text */}
+                <div>
+                  <h1 className="font-bold text-center md:text-left text-2xl llg:text-3xl">
+                    {detail.title}
+                  </h1>
+                  <p className="font-medium llg:text-lg text-center md:text-left">
+                    {detail.desc}
+                  </p>
+                </div>
+
+                {/* image */}
+                <div className="">
+                  <div className="bg-white/10 backdrop-blur-sm w-[12rem] aspect-square rounded-full overflow-hidden">
+                    <img
+                      src={detail.image}
+                      alt={`image of ${detail.title}`}
+                      className="absolute top-3"
+                    />
+                  </div>
+                </div>
+              </div>
+              {/* Hover effect overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/0 to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+            </div>
+          ))}
+        </div>
       </div>
     </motion.section>
   );

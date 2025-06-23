@@ -10,14 +10,14 @@ const AcademyCourses = () => {
   ];
 
   return (
-    <section className="pt-[10rem]">
+    <section className="pt-[4rem] md:pt-[10rem]">
       <div>
         <div className="pb-5">
           <h1 className="text-xl xs:text-3xl md:text-5xl mt-5 font-semibold tracking-tighter bg-gradient-to-b from-neutral-50 via-neutral-300 to-neutral-700 bg-clip-text text-transparent py-5 flex flex-col">
             What You'll Learn
           </h1>
         </div>
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {programs.map((program, index) => (
             <div
               key={index}
@@ -72,7 +72,7 @@ const AcademyCourses = () => {
         </div>
 
         {/* Infinite Scrolling Text with Reflection */}
-        <div className="pt-10 rotate-[1deg] group relative">
+        <div className=" rotate-[-1deg] group relative">
           {/* Original Scrolling Container */}
           <div className="border-t-2 border-b-2 border-indigo-500 flex flex-1 overflow-hidden py-7 [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
             <motion.div

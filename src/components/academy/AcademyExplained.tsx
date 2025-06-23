@@ -11,7 +11,7 @@ import AcademyCourses from "./AcademyCourses";
 
 const AcademyExplained = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(sectionRef, { once: false, amount: 0.1 });
+  const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
 
   // Animation variants
   const containerVariants = {
@@ -36,7 +36,7 @@ const AcademyExplained = () => {
   return (
     <motion.section
       ref={sectionRef}
-      className="max-w-7xl mx-auto px-4 py-10 md:py-20"
+      className="max-w-7xl mx-auto px-4 py-20"
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={containerVariants}
@@ -47,14 +47,6 @@ const AcademyExplained = () => {
           className="flex flex-col items-center text-center relative"
           variants={containerVariants}
         >
-          {/* badge text */}
-          <motion.p
-            className="border border-[#002752] py-2 px-6 rounded-full text-sm sm:text-lg flex items-center gap-2"
-            variants={itemVariants}
-          >
-            Let's take you back in time
-          </motion.p>
-
           {/* header text */}
           <motion.h1
             className="text-xl xs:text-3xl md:text-5xl lg:text-8xl mt-5 font-semibold tracking-tighter bg-gradient-to-b from-neutral-50 via-neutral-300 to-neutral-700 bg-clip-text text-transparent py-5 flex flex-col"
@@ -67,7 +59,7 @@ const AcademyExplained = () => {
 
         {/* stories */}
         <div className="w-full my-10">
-          <div className="border-2 border-white/10 text-ashGray rounded-[45px] p-[50px] w-full text-sm xs:text-base md:text-xl font-medium">
+          <div className="border-2 border-white/10 text-ashGray rounded-[45px] p-[30px] sm:p-[50px] w-full text-sm xs:text-base md:text-xl font-medium">
             <p>
               In a world driven by data, security, and intelligent systems, you
               don't need a degree to succeed — you need direction, discipline,

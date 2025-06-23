@@ -5,9 +5,9 @@ import { AnimeBtn } from "../shared/AnimeBtn";
 const AcademyGetStarted = () => {
   return (
     <div>
-      <div className="bg-black border border-white/30 max-w-7xl mx-auto min-h-[400px] text-ashGray rounded-[20px] sm:rounded-[45px] p-10 sm:p-[50px] relative overflow-hidden">
+      <div className="bg-black border border-white/30 max-w-7xl mx-auto min-h-[300px] sm:min-h-[400px] text-ashGray rounded-[50px] sm:rounded-[45px] p-[30px] sm:p-[50px] relative overflow-hidden">
         <div className="absolute md:hidden inset-0 bg-black/60 z-5"></div>
-        <div className="flex items-center justify-center md:items-start md:justify-start">
+        <div className="flex items-center  justify-center md:items-start md:justify-start">
           <div className="relative z-10 max-w-[35rem] mt-4">
             {/* header text */}
             <h1 className="text-white text-xl xs:text-2xl sm:text-3xl md:text-5xl font-bold">

@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className="relative">
       {/* get started */}
-      <section className="absolute -top-[13rem] w-full px-4 z-1">
+      <section className="absolute -top-[7rem] sm:-top-[13rem] w-full px-4 z-1">
         <AcademyGetStarted />
       </section>
 
